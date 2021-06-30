@@ -1,0 +1,46 @@
+/* <-- WEBSITE-CONTENTS ABOUT-ME --> */
+.about-me{
+    @media (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2vw;
+    }
+
+    /* Tamaño de la foto de perfil en desktop */
+    @media (min-width: 769px){
+        display: flex;
+        justify-content: center;
+        margin: 2vw;
+    }
+
+    img{
+        height: 300px;
+        border-radius: 50%;
+        box-shadow: 0 0 1em;
+        transition: transform 2s;
+
+        &:hover{
+            transform: rotate(-15deg);
+        }
+    }
+
+    div{
+        margin-left: 2vw;
+        text-align: justify;
+
+        h2{ 
+            text-align: left;
+        }
+        p{
+            strong{
+                font-size: 1.25em;
+            }
+
+            .quote{
+                font-family: 'Palanquin', sans-serif;
+                font-size: 2em;
+            }
+        }
+    }
+}

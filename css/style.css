@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/* Variables: paleta de color, fonts y propiedades estándar */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Estructura del sitio */
+/* <-- BODY --> */
+.body {
+  width: 100%;
+  background-color: #d9d9d9;
+  font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.body-index {
+  height: 100vh;
+}
+@media (min-width: 769px) {
+  .body-index {
+    /* Grid para desktop */
+    display: grid;
+    gap: 3vh 1vw;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "gallery gallery gallery header" "gallery gallery gallery button" "footer footer footer footer";
+  }
+}
+@media (max-width: 768px) {
+  .body-index {
+    /* Grid para tablet y moblile */
+    align-items: center;
+  }
+}
+
+/* <-- HEADER --> */
+.header nav {
+  /* En 'website.html' el header es un navbar de Bootstrap  */
+  background-color: #0d0d0d;
+}
+.header img {
+  height: 5.3rem;
+  margin: 1rem;
+}
+@media (max-width: 480px) {
+  .header .hm-logo {
+    /* En mobile el logo no es visible. */
+    display: none;
+  }
+}
+.header-index {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 769px) {
+  .header-index {
+    /* Grid para desktop */
+    flex-direction: column;
+  }
+}
+.header-index h1 {
+  color: #595959;
+}
+.header-index h2 {
+  color: #595959;
+}
+@media (max-width: 768px) {
+  .header-index h2 {
+    display: none;
+  }
+}
+
+footer {
+  height: min-content;
+  background: linear-gradient(to top, #595959, #d9d9d9);
+  padding: 0.3vw;
+}
+footer ul {
+  padding: 0.25vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer ul li a {
+  display: flex;
+  align-items: center;
+  color: #0d0d0d;
+}
+footer ul li a:hover {
+  color: #0d0d0d;
+}
+footer ul li a:visited {
+  color: #0d0d0d;
+}
+footer ul li a img {
+  width: 2.5vw;
+  height: 2.5vw;
+  margin-right: 3px;
+}
+@media (max-width: 768px) {
+  footer ul li a img {
+    /* Tamaño mínimo de los íconos de redes para tablet y mobile */
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 480px) {
+  footer ul li a span {
+    /* Elimino la descripción de los íconos de redes para mobile */
+    display: none;
+    align-self: flex-end;
+  }
+}
+
+/* Diseño del Index */
+/* <-- INDEX --> */
+.body-index div {
+  grid-area: gallery;
+  display: grid;
+  gap: 3vh 1vw;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "bv1 tc2 bh3" "bv1 bh9 bv9" "th3 bh7 bv9";
+}
+.body-index div img {
+  box-shadow: 0 0 10px #0D0D0D;
+  transition: transform 2s;
+}
+.body-index div img:hover {
+  transform: scale(1.05);
+}
+@media (min-width: 769px) {
+  .body-index div img {
+    /* Grid para desktop */
+    width: 15vw;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .body-index div img {
+    /* Grid para tablet */
+    width: 20vw;
+  }
+}
+@media (max-width: 480px) {
+  .body-index div img {
+    /* Grid para mobile */
+    width: 25vw;
+  }
+}
+.body-index div .bh3 {
+  grid-area: bh3;
+}
+.body-index div .bh7 {
+  grid-area: bh7;
+}
+.body-index div .tc2 {
+  grid-area: tc2;
+}
+.body-index div .th3 {
+  grid-area: th3;
+}
+.body-index div .bv1 {
+  grid-area: bv1;
+}
+.body-index div .bv9 {
+  grid-area: bv9;
+}
+.body-index div .bh9 {
+  grid-area: bh9;
+}
+.body-index a {
+  grid-area: button;
+}
+.body-index footer {
+  width: 100%;
+  grid-area: footer;
+  align-self: flex-end;
+}
+
+/* Diseño del Website */
+/* <-- WEBSITE --> */
+/* El margen superior se calcula en base al tamaño del navbar. */
+.website-contents {
+  margin: 9.3rem 2vw 0 2vw;
+}
+.website-contents .content-container {
+  margin-top: 5vh;
+}
+.website-contents .content-container .content {
+  background-color: #969595;
+  padding: 5vw;
+}
+
+/* <-- WEBSITE-CONTENTS ABOUT-ME --> */
+.about-me {
+  /* Tamaño de la foto de perfil en desktop */
+}
+@media (max-width: 768px) {
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+  }
+}
+@media (min-width: 769px) {
+  .about-me {
+    display: flex;
+    justify-content: center;
+    margin: 2vw;
+  }
+}
+.about-me img {
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 1em;
+  transition: transform 2s;
+}
+.about-me img:hover {
+  transform: rotate(-15deg);
+}
+.about-me div {
+  margin-left: 2vw;
+  text-align: justify;
+}
+.about-me div h2 {
+  text-align: left;
+}
+.about-me div p strong {
+  font-size: 1.25em;
+}
+.about-me div p .quote {
+  font-family: "Palanquin", sans-serif;
+  font-size: 2em;
+}
+
+/* <-- WEBSITE-CONTENTS CONTACT --> */
+.contact {
+  margin-bottom: 10vh;
+}
+.contact form {
+  padding: 0 5vw 1vw 5vw;
+}
+
+/* <-- WEBSITE-CONTENTS PORTFOLIO --> */
+.portfolio div div h3 {
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
+.portfolio div div div div {
+  height: 58vh;
+}
+.portfolio div div div .vertical-photo-container img {
+  height: 100%;
+}
+/* <-- WEBSITE-CONTENTS PROPOSAL --> */
+
+/*# sourceMappingURL=style.css.map */

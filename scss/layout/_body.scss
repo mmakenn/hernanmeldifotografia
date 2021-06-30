@@ -1,0 +1,27 @@
+/* <-- BODY --> */
+.body{
+    width: 100%;
+    background-color: map-get($colors , light);
+    font-family: map-get($fonts , general), map-get($fonts , secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-index{
+        height: 100vh;
+
+        @media (min-width: map-get($size , min-desktop)){
+        /* Grid para desktop */
+            @include grid(4);
+            grid-template-areas:
+            "gallery gallery gallery header"
+            "gallery gallery gallery button"
+            "footer footer footer footer";
+        }
+    
+        @media (max-width: map-get($size , max-tablet)){
+            /* Grid para tablet y moblile */
+            align-items: center;
+        }
+    }
+}

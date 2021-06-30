@@ -1,0 +1,23 @@
+/* Variables: paleta de color, fonts y propiedades estándar */
+@import 'utilities/colors';
+@import 'utilities/fonts';
+@import 'utilities/properties';
+@import 'utilities/breakpoints';
+
+/* Reset */
+@import 'base/reset';
+
+/* Estructura del sitio */
+@import 'layout/body';
+@import 'layout/header';
+@import 'layout/footer';
+
+/* Diseño del Index */
+@import 'views/index';
+
+/* Diseño del Website */
+@import 'views/website';
+@import 'views/website/aboutme';
+@import 'views/website/contact';
+@import 'views/website/portfolio';
+@import 'views/website/proposal';

@@ -1,0 +1,45 @@
+/* <-- HEADER --> */
+$size-header-img: 5.3rem;
+$padding-header-img: 1rem;
+
+.header{
+    nav{
+        /* En 'website.html' el header es un navbar de Bootstrap  */
+        background-color: map-get($colors , dark);
+    }
+
+    img{
+        height: $size-header-img;
+        margin: $padding-header-img;
+    }
+
+    .hm-logo{
+        @media (max-width: map-get($size , max-mobile)) {
+            /* En mobile el logo no es visible. */
+            display: none;
+        }
+    }
+
+    &-index{
+        grid-area: header;
+        display: flex;
+        align-items: center;
+
+        @media (min-width: map-get($size , min-desktop)){
+            /* Grid para desktop */
+            flex-direction: column;
+        }
+
+        h1{
+            color: map-get($colors , middle);
+        }
+
+        h2{
+            color: map-get($colors , middle);
+
+            @media (max-width: map-get($size, max-tablet)){
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+$max-mobile: 480px;
+$max-tablet: 768px;
+
+$size:(
+    max-mobile: ($max-mobile),
+    min-tablet: ($max-mobile+1),
+    max-tablet: ($max-tablet),
+    min-desktop: ($max-tablet+1),
+);

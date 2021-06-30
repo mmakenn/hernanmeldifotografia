@@ -1,0 +1,67 @@
+/* <-- INDEX --> */
+.body-index{
+    div{
+        grid-area: gallery;
+        @include grid(3);
+        grid-template-areas:
+        "bv1 tc2 bh3"
+        "bv1 bh9 bv9"
+        "th3 bh7 bv9";
+
+        img{
+            box-shadow: 0 0 10px #0D0D0D;
+            transition: transform 2s;
+
+            &:hover{
+                transform: scale(1.05);
+            }
+
+            @media (min-width: map-get($size , min-desktop)){
+                /* Grid para desktop */
+                width: 15vw;
+            }
+
+            @media (min-width: map-get($size , min-tablet)) and (max-width: map-get($size , max-tablet)){
+                /* Grid para tablet */
+                width: 20vw;
+            }
+
+            @media (max-width: map-get($size , max-mobile)){
+                /* Grid para mobile */
+                width: 25vw;
+            }
+        }
+
+        .bh3{
+            grid-area: bh3;
+        }
+        .bh7{
+            grid-area: bh7;
+        }
+        .tc2{
+            grid-area: tc2;
+        }
+        .th3{
+            grid-area: th3;
+        }
+        .bv1{
+            grid-area: bv1;
+        }
+        .bv9{
+            grid-area: bv9;
+        }
+        .bh9{
+            grid-area: bh9;
+        }
+    }
+
+    a{
+        grid-area: button;
+    }
+
+    footer{
+        width: 100%;
+        grid-area: footer;
+        align-self: flex-end;
+    }
+}

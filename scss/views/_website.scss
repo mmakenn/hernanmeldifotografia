@@ -1,0 +1,17 @@
+/* <-- WEBSITE --> */
+/* El margen superior se calcula en base al tamaño del navbar. */
+$margin-top: ($size-header-img + 2 + ($padding-header-img*2));
+$margin-aside: 2vw;
+
+.website-contents{
+    margin: $margin-top $margin-aside 0 $margin-aside;
+
+    .content-container{
+        margin-top: 5vh;
+
+        .content{
+            background-color: map-get($colors , mid-light);
+            padding: 5vw;
+        }
+    }
+}
