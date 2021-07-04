@@ -32,7 +32,7 @@ a {
   .body-index {
     /* Grid para desktop */
     display: grid;
-    gap: 3vh 1vw;
+    gap: 1rem 1rem;
     align-items: center;
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
@@ -44,6 +44,12 @@ a {
     /* Grid para tablet y moblile */
     align-items: center;
   }
+}
+.body h2 {
+  font-family: "Kaushan Script", cursive;
+}
+.body h3 {
+  font-family: "Kaushan Script", cursive;
 }
 
 /* <-- HEADER --> */
@@ -131,7 +137,7 @@ footer ul li a img {
 .body-index div {
   grid-area: gallery;
   display: grid;
-  gap: 3vh 1vw;
+  gap: 1rem 1rem;
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);

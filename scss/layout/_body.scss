@@ -24,4 +24,12 @@
             align-items: center;
         }
     }
+
+    h2{
+        font-family: map-get($fonts , titles), map-get($fonts , titles-secondary);
+    }
+
+    h3{
+        font-family: map-get($fonts , titles), map-get($fonts , titles-secondary);
+    }
 }
