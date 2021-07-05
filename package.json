@@ -7,5 +7,13 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "<h1 align=\"center\">Hi 👋, I'm Mac Meldi Roch</h1>\r <h3 align=\"center\">A passionate developer from Argentina</h3>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmakenn/hernanmeldifotografia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmakenn/hernanmeldifotografia/issues"
+  },
+  "homepage": "https://github.com/mmakenn/hernanmeldifotografia#readme"
 }

@@ -27,12 +27,13 @@
 
     div{
         margin-left: 2vw;
-        text-align: justify;
+        text-align: center;
 
         h2{ 
             text-align: left;
         }
         p{
+            font-family: map-get($fonts, handwriting), map-get($fonts, handwriting-secondary);
             strong{
                 font-size: 1.25em;
             }

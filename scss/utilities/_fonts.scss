@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); /* 'Dancing Script' */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap'); /* 'Kalam' */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap'); /* 'Kaushan Script' */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap'); /* 'Roboto Condensed' */
+
 $fonts: (
     general: 'Roboto Condensed', 
     secondary: sans-serif,
-    titles: 'Kaushan Script', 
-    titles-secondary: cursive
+    subtitles: 'Kaushan Script', 
+    cursive: cursive,
+    handwriting: 'Kalam',
+    titles: 'Dancing Script'
 );

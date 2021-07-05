@@ -9,24 +9,12 @@ footer{
     ul{
         padding: 0.25vw;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-end;
         flex-wrap: wrap;
 
         li{
 
             a{
-                display: flex;
-                align-items: center;
-                color: map-get($colors , dark);
-
-                &:hover{
-                    color: map-get($colors , dark);
-                }
-
-                &:visited{
-                    color: map-get($colors , dark);
-                }
-
                 img{
                     width: $icon-size;
                     height: $icon-size;
@@ -36,14 +24,6 @@ footer{
                         /* Tamaño mínimo de los íconos de redes para tablet y mobile */
                         width: $icon-size-tablet-mobile;
                         height: $icon-size-tablet-mobile;
-                    }
-                }
-
-                span{
-                    @media (max-width: map-get($size, max-mobile)){
-                        /* Elimino la descripción de los íconos de redes para mobile */
-                        display: none;
-                        align-self: flex-end;
                     }
                 }
             }

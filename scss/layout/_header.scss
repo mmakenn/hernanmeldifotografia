@@ -6,6 +6,10 @@ $padding-header-img: 1rem;
     nav{
         /* En 'website.html' el header es un navbar de Bootstrap  */
         background-color: map-get($colors , dark);
+
+        a{
+            letter-spacing: 0.1rem;
+        }
     }
 
     img{

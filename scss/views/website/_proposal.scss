@@ -1,4 +1,19 @@
 /* <-- WEBSITE-CONTENTS PROPOSAL --> */
 .proposal{
-    
+    .card{
+        .card-img{
+            opacity: 0.5;
+        }
+
+        .card-img-overlay{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            .card-title{
+                color: map-get($colors , dark);
+            }
+        }
+    }
 }

@@ -5,14 +5,15 @@
     }
 
     div{
-        div{
-            h3{
-                margin-top: 5vh;
-                margin-bottom: 2vh;
-            }
+        .subtitle-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
             p{
-
+                font-family: map-get($fonts, handwriting), map-get($fonts, handwriting-secondary);
+                text-align: center;
             }
         }
 

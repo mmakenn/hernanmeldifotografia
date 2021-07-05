@@ -1,5 +1,13 @@
 @charset "UTF-8";
 /* Variables: paleta de color, fonts y propiedades estándar */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+/* 'Dancing Script' */
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap");
+/* 'Kalam' */
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+/* 'Kaushan Script' */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
+/* 'Roboto Condensed' */
 /* Reset */
 * {
   margin: 0;
@@ -21,6 +29,7 @@ a {
   width: 100%;
   background-color: #d9d9d9;
   font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,16 +55,21 @@ a {
   }
 }
 .body h2 {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Dancing Script";
+  font-size: 3rem;
 }
 .body h3 {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Kaushan Script";
+  font-size: 2.5rem;
 }
 
 /* <-- HEADER --> */
 .header nav {
   /* En 'website.html' el header es un navbar de Bootstrap  */
   background-color: #0d0d0d;
+}
+.header nav a {
+  letter-spacing: 0.1rem;
 }
 .header img {
   height: 5.3rem;
@@ -98,19 +112,8 @@ footer {
 footer ul {
   padding: 0.25vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   flex-wrap: wrap;
-}
-footer ul li a {
-  display: flex;
-  align-items: center;
-  color: #0d0d0d;
-}
-footer ul li a:hover {
-  color: #0d0d0d;
-}
-footer ul li a:visited {
-  color: #0d0d0d;
 }
 footer ul li a img {
   width: 2.5vw;
@@ -122,13 +125,6 @@ footer ul li a img {
     /* Tamaño mínimo de los íconos de redes para tablet y mobile */
     width: 25px;
     height: 25px;
-  }
-}
-@media (max-width: 480px) {
-  footer ul li a span {
-    /* Elimino la descripción de los íconos de redes para mobile */
-    display: none;
-    align-self: flex-end;
   }
 }
 
@@ -242,10 +238,13 @@ footer ul li a img {
 }
 .about-me div {
   margin-left: 2vw;
-  text-align: justify;
+  text-align: center;
 }
 .about-me div h2 {
   text-align: left;
+}
+.about-me div p {
+  font-family: "Kalam";
 }
 .about-me div p strong {
   font-size: 1.25em;
@@ -264,9 +263,15 @@ footer ul li a img {
 }
 
 /* <-- WEBSITE-CONTENTS PORTFOLIO --> */
-.portfolio div div h3 {
-  margin-top: 5vh;
-  margin-bottom: 2vh;
+.portfolio div .subtitle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio div .subtitle-container p {
+  font-family: "Kalam";
+  text-align: center;
 }
 .portfolio div div div div {
   height: 58vh;
@@ -275,5 +280,16 @@ footer ul li a img {
   height: 100%;
 }
 /* <-- WEBSITE-CONTENTS PROPOSAL --> */
+.proposal .card .card-img {
+  opacity: 0.5;
+}
+.proposal .card .card-img-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.proposal .card .card-img-overlay .card-title {
+  color: #0d0d0d;
+}
 
 /*# sourceMappingURL=style.css.map */

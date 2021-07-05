@@ -3,6 +3,7 @@
     width: 100%;
     background-color: map-get($colors , light);
     font-family: map-get($fonts , general), map-get($fonts , secondary);
+    font-size: 1.1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,9 +28,11 @@
 
     h2{
         font-family: map-get($fonts , titles), map-get($fonts , titles-secondary);
+        font-size: 3rem;
     }
 
     h3{
-        font-family: map-get($fonts , titles), map-get($fonts , titles-secondary);
+        font-family: map-get($fonts , subtitles), map-get($fonts , titles-secondary);
+        font-size: 2.5rem;
     }
 }
