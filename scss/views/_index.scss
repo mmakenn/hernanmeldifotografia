@@ -1,6 +1,6 @@
 /* <-- INDEX --> */
 .body-index{
-    div{
+    .gallery-index{
         grid-area: gallery;
         @include grid(3);
         grid-template-areas:

@@ -15,16 +15,14 @@ footer{
         li{
 
             a{
-                img{
-                    width: $icon-size;
-                    height: $icon-size;
-                    margin-right: 3px;
+                color: map-get($colors , mid-dark);
 
-                    @media (max-width: map-get($size, max-tablet)){
-                        /* Tamaño mínimo de los íconos de redes para tablet y mobile */
-                        width: $icon-size-tablet-mobile;
-                        height: $icon-size-tablet-mobile;
-                    }
+                &:hover{
+                    color: map-get($colors, dark);
+                }
+
+                &:visited{
+                    color: map-get($colors , mid-dark);
                 }
             }
         }

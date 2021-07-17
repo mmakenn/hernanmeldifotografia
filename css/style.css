@@ -8,6 +8,22 @@
 /* 'Kaushan Script' */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
 /* 'Roboto Condensed' */
+@font-face {
+  font-family: "fontello";
+  src: url("../font/fontello.eot?78180543");
+  src: url("../font/fontello.eot?78180543#iefix") format("embedded-opentype"), url("../font/fontello.woff2?78180543") format("woff2"), url("../font/fontello.woff?78180543") format("woff"), url("../font/fontello.ttf?78180543") format("truetype"), url("../font/fontello.svg?78180543#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.socialmedia-icon {
+  font-family: "fontello";
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+  padding: 1rem;
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -115,22 +131,19 @@ footer ul {
   justify-content: flex-end;
   flex-wrap: wrap;
 }
-footer ul li a img {
-  width: 2.5vw;
-  height: 2.5vw;
-  margin-right: 3px;
+footer ul li a {
+  color: #262626;
 }
-@media (max-width: 768px) {
-  footer ul li a img {
-    /* Tamaño mínimo de los íconos de redes para tablet y mobile */
-    width: 25px;
-    height: 25px;
-  }
+footer ul li a:hover {
+  color: #0d0d0d;
+}
+footer ul li a:visited {
+  color: #262626;
 }
 
 /* Diseño del Index */
 /* <-- INDEX --> */
-.body-index div {
+.body-index .gallery-index {
   grid-area: gallery;
   display: grid;
   gap: 1rem 1rem;
@@ -139,50 +152,50 @@ footer ul li a img {
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "bv1 tc2 bh3" "bv1 bh9 bv9" "th3 bh7 bv9";
 }
-.body-index div img {
+.body-index .gallery-index img {
   box-shadow: 0 0 10px #0D0D0D;
   transition: transform 2s;
 }
-.body-index div img:hover {
+.body-index .gallery-index img:hover {
   transform: scale(1.05);
 }
 @media (min-width: 769px) {
-  .body-index div img {
+  .body-index .gallery-index img {
     /* Grid para desktop */
     width: 15vw;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  .body-index div img {
+  .body-index .gallery-index img {
     /* Grid para tablet */
     width: 20vw;
   }
 }
 @media (max-width: 480px) {
-  .body-index div img {
+  .body-index .gallery-index img {
     /* Grid para mobile */
     width: 25vw;
   }
 }
-.body-index div .bh3 {
+.body-index .gallery-index .bh3 {
   grid-area: bh3;
 }
-.body-index div .bh7 {
+.body-index .gallery-index .bh7 {
   grid-area: bh7;
 }
-.body-index div .tc2 {
+.body-index .gallery-index .tc2 {
   grid-area: tc2;
 }
-.body-index div .th3 {
+.body-index .gallery-index .th3 {
   grid-area: th3;
 }
-.body-index div .bv1 {
+.body-index .gallery-index .bv1 {
   grid-area: bv1;
 }
-.body-index div .bv9 {
+.body-index .gallery-index .bv9 {
   grid-area: bv9;
 }
-.body-index div .bh9 {
+.body-index .gallery-index .bh9 {
   grid-area: bh9;
 }
 .body-index a {
