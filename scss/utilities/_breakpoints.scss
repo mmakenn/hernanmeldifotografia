@@ -6,4 +6,5 @@ $size:(
     min-tablet: ($max-mobile+1),
     max-tablet: ($max-tablet),
     min-desktop: ($max-tablet+1),
+    bootstrap-lg: 992px /* Para controlar el tamaño de las img en el carousel. */
 );

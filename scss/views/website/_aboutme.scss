@@ -1,17 +1,17 @@
 /* <-- WEBSITE-CONTENTS ABOUT-ME --> */
 .about-me{
-    @media (max-width: 768px){
-        display: flex;
+    display: flex;
+    margin: 2vw;
+
+    /* Disposición de la sección en tablet y mobile */
+    @media (max-width: map-get($size, max-tablet)){
         flex-direction: column;
         align-items: center;
-        margin: 2vw;
     }
 
-    /* Tamaño de la foto de perfil en desktop */
-    @media (min-width: 769px){
-        display: flex;
+    /* Disposición de la sección en desktop */
+    @media (min-width: map-get($size, min-desktop)){
         justify-content: center;
-        margin: 2vw;
     }
 
     img{

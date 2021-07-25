@@ -5,7 +5,7 @@
         @include grid(3);
         grid-template-areas:
         "bv1 tc2 bh3"
-        "bv1 bh9 bv9"
+        "bv1 bh5 bv9"
         "th3 bh7 bv9";
 
         img{
@@ -50,8 +50,8 @@
         .bv9{
             grid-area: bv9;
         }
-        .bh9{
-            grid-area: bh9;
+        .bh5{
+            grid-area: bh5;
         }
     }
 

@@ -1,10 +1,10 @@
 /* <-- WEBSITE-CONTENTS PORTFOLIO --> */
+$img-relation: 1.5;
+$max-size: 90vw;
+$max-size-lg: 50vw;
+
 .portfolio{
-    h2{
-
-    }
-
-    div{
+    .content{
         .subtitle-container{
             display: flex;
             flex-direction: column;
@@ -17,20 +17,30 @@
             }
         }
 
-        div{
-            div{
-                div{
-                    height: 58vh;
+        .carousel-inner{
+
+            .carousel-item{
+                height: $max-size/$img-relation;
+
+                @media (min-width: map-get($size, bootstrap-lg)){
+                    height: $max-size-lg/$img-relation;
                 }
-                .vertical-photo-container{
-                    img{
-                        height: 100%;
+
+                .carousel-img-h{
+                    width: $max-size;
+
+                    @media (min-width: map-get($size, bootstrap-lg)){
+                        width: $max-size-lg;
                     }
                 }
-            }
 
-            button{
+                .carousel-img-v{
+                    height: $max-size/$img-relation;
 
+                    @media (min-width: map-get($size, bootstrap-lg)){
+                        height: $max-size-lg/$img-relation;
+                    }
+                }
             }
         }
     }

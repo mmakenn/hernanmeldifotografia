@@ -80,22 +80,22 @@ a {
 }
 
 /* <-- HEADER --> */
-.header nav {
-  /* En 'website.html' el header es un navbar de Bootstrap  */
-  background-color: #0d0d0d;
-}
-.header nav a {
-  letter-spacing: 0.1rem;
-}
 .header img {
-  height: 5.3rem;
-  margin: 1rem;
+  height: 5rem;
+  margin: 0.3rem;
 }
 @media (max-width: 480px) {
   .header .hm-logo {
     /* En mobile el logo no es visible. */
     display: none;
   }
+}
+.header-website nav {
+  /* En 'website.html' el header es un navbar de Bootstrap  */
+  background-color: #0d0d0d;
+}
+.header-website nav a {
+  letter-spacing: 0.1rem;
 }
 .header-index {
   grid-area: header;
@@ -120,6 +120,7 @@ a {
   }
 }
 
+/* <-- FOOTER --> */
 footer {
   height: min-content;
   background: linear-gradient(to top, #595959, #d9d9d9);
@@ -150,7 +151,7 @@ footer ul li a:visited {
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "bv1 tc2 bh3" "bv1 bh9 bv9" "th3 bh7 bv9";
+  grid-template-areas: "bv1 tc2 bh3" "bv1 bh5 bv9" "th3 bh7 bv9";
 }
 .body-index .gallery-index img {
   box-shadow: 0 0 10px #0D0D0D;
@@ -195,8 +196,8 @@ footer ul li a:visited {
 .body-index .gallery-index .bv9 {
   grid-area: bv9;
 }
-.body-index .gallery-index .bh9 {
-  grid-area: bh9;
+.body-index .gallery-index .bh5 {
+  grid-area: bh5;
 }
 .body-index a {
   grid-area: button;
@@ -209,12 +210,12 @@ footer ul li a:visited {
 
 /* Diseño del Website */
 /* <-- WEBSITE --> */
-/* El margen superior se calcula en base al tamaño del navbar. */
+/* El padding superior de cada sección se calcula en base al tamaño del navbar para que no quede por debajo. */
 .website-contents {
-  margin: 9.3rem 2vw 0 2vw;
+  margin: 0 2vw 0 2vw;
 }
 .website-contents .content-container {
-  margin-top: 5vh;
+  padding-top: 7.6rem;
 }
 .website-contents .content-container .content {
   background-color: #969595;
@@ -223,21 +224,20 @@ footer ul li a:visited {
 
 /* <-- WEBSITE-CONTENTS ABOUT-ME --> */
 .about-me {
-  /* Tamaño de la foto de perfil en desktop */
+  display: flex;
+  margin: 2vw;
+  /* Disposición de la sección en tablet y mobile */
+  /* Disposición de la sección en desktop */
 }
 @media (max-width: 768px) {
   .about-me {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2vw;
   }
 }
 @media (min-width: 769px) {
   .about-me {
-    display: flex;
     justify-content: center;
-    margin: 2vw;
   }
 }
 .about-me img {
@@ -276,33 +276,76 @@ footer ul li a:visited {
 }
 
 /* <-- WEBSITE-CONTENTS PORTFOLIO --> */
-.portfolio div .subtitle-container {
+.portfolio .content .subtitle-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.portfolio div .subtitle-container p {
+.portfolio .content .subtitle-container p {
   font-family: "Kalam";
   text-align: center;
 }
-.portfolio div div div div {
-  height: 58vh;
+.portfolio .content .carousel-inner .carousel-item {
+  height: 60vw;
 }
-.portfolio div div div .vertical-photo-container img {
-  height: 100%;
+@media (min-width: 992px) {
+  .portfolio .content .carousel-inner .carousel-item {
+    height: 33.3333333333vw;
+  }
 }
+.portfolio .content .carousel-inner .carousel-item .carousel-img-h {
+  width: 90vw;
+}
+@media (min-width: 992px) {
+  .portfolio .content .carousel-inner .carousel-item .carousel-img-h {
+    width: 50vw;
+  }
+}
+.portfolio .content .carousel-inner .carousel-item .carousel-img-v {
+  height: 60vw;
+}
+@media (min-width: 992px) {
+  .portfolio .content .carousel-inner .carousel-item .carousel-img-v {
+    height: 33.3333333333vw;
+  }
+}
+
 /* <-- WEBSITE-CONTENTS PROPOSAL --> */
+.proposal .card {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
 .proposal .card .card-img {
   opacity: 0.5;
 }
+.proposal .card .card-img-video {
+  height: 300px;
+}
+.proposal .card .card-img-edition {
+  height: 300px;
+  width: 810px;
+  align-self: center;
+}
 .proposal .card .card-img-overlay {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .proposal .card .card-img-overlay .card-title {
   color: #0d0d0d;
+}
+.proposal .card .card-img-overlay .card-title-aux {
+  color: #d9d9d9;
+  display: none;
+}
+.proposal .video-container #productionVideo {
+  display: none;
+}
+.proposal .video-container #editionVideo {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

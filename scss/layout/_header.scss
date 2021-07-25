@@ -1,17 +1,8 @@
 /* <-- HEADER --> */
-$size-header-img: 5.3rem;
-$padding-header-img: 1rem;
+$size-header-img: 5rem;
+$padding-header-img: 0.3rem;
 
 .header{
-    nav{
-        /* En 'website.html' el header es un navbar de Bootstrap  */
-        background-color: map-get($colors , dark);
-
-        a{
-            letter-spacing: 0.1rem;
-        }
-    }
-
     img{
         height: $size-header-img;
         margin: $padding-header-img;
@@ -21,6 +12,17 @@ $padding-header-img: 1rem;
         @media (max-width: map-get($size , max-mobile)) {
             /* En mobile el logo no es visible. */
             display: none;
+        }
+    }
+
+    &-website{
+        nav{
+            /* En 'website.html' el header es un navbar de Bootstrap  */
+            background-color: map-get($colors , dark);
+    
+            a{
+                letter-spacing: 0.1rem;
+            }
         }
     }
 
