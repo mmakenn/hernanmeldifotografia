@@ -276,6 +276,11 @@ footer ul li a:visited {
 }
 
 /* <-- WEBSITE-CONTENTS PORTFOLIO --> */
+@media (max-width: 992px) {
+  .portfolio .content-reverse {
+    flex-direction: column-reverse;
+  }
+}
 .portfolio .content .subtitle-container {
   display: flex;
   flex-direction: column;

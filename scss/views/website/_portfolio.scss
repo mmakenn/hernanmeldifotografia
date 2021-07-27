@@ -5,6 +5,13 @@ $max-size-lg: 50vw;
 
 .portfolio{
     .content{
+
+        &-reverse{
+            @media (max-width: map-get($size, bootstrap-lg)){
+                flex-direction: column-reverse;
+            }
+        }
+
         .subtitle-container{
             display: flex;
             flex-direction: column;
